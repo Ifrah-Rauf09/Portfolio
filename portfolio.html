@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ifrah Rauf - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, serif;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo i {
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      margin-right: 100px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      color: #ff6f61;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+      margin-right: 40px;
+    }
+
+    .home-section {
+      background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .home-section h1 {
+      font-size: 4rem;
+      animation: fadeInDown 2s;
+      color: #ff6f61;
+    }
+
+    .home-section p {
+      font-size: 1.5rem;
+      animation: fadeInUp 2s;
+      color: #ff6f61;
+    }
+
+    .about-section, .skills-section, .projects-section, .contact-section {
+      padding: 80px 20px;
+    }
+
+    .about-section .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .about-section img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      animation: fadeInLeft 2s;
+    }
+
+    .about-section h2 {
+      animation: slideInRight 2s;
+    }
+
+    .about-section p {
+      animation: fadeIn 2s;
+    }
+
+    .skills-section .skills-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .skills-section .skill-item {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+      width: 200px;
+      animation: bounceIn 1.5s ease-in-out;
+    }
+
+    .skills-section .skill-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .skills-section .skill-item i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #ff6f61;
+    }
+
+    .projects-section .projects-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .projects-section .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      width: 450px;
+      animation: fadeInUp 2s;
+    }
+
+    .projects-section .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .projects-section .card h3 {
+      color: #ff6f61;
+    }
+
+    .contact-section {
+      background: #ed7070;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contact-section a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-section a:hover {
+      color: #333;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(100px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bounceIn {
+      0% { opacity: 0; transform: scale(0.5); }
+      60% { opacity: 1; transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+
+      .menu-icon {
+        display: block;
+        margin-right: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        Ifrah Rauf
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="home-section">
+    <div class="container">
+      <h1>Hello, I'm <span style="color: #ff6f61;">Ifrah Rauf</span></h1>
+      <p>And I'm a <span style="color: #ff6f61;">Frontend Developer!</span></p>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="container">
+      <img src="https://i.pinimg.com/474x/4c/06/59/4c0659cff48c93f034754639983123dc.jpg" alt="Ifrah Rauf">
+      <div>
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm <strong>Ifrah Rauf</strong>, a passionate and driven student currently pursuing my <strong>Bachelor of Computer Science (BCS)</strong>. My academic journey has equipped me with a strong foundation in programming, algorithms, data structures, and software development principles. I am particularly fascinated by the ever-evolving world of <strong>web development</strong>, where creativity meets technology to build impactful and user-friendly solutions.
+        </p>
+        <p>
+          As a budding developer, I specialize in creating <strong>responsive, dynamic, and visually appealing websites</strong>. My toolkit includes modern technologies like <strong>HTML, CSS, JavaScript, React, and Node.js</strong>, which I use to bring ideas to life. I am also deeply interested in <strong>UI/UX design</strong>, ensuring that every project I work on is not only functional but also provides an exceptional user experience.
+        </p>
+        <p>
+          Beyond academics, I actively engage in personal projects and open-source contributions to hone my skills and stay updated with the latest industry trends. My goal is to leverage my knowledge in computer science and web development to solve real-world problems and create innovative solutions that make a difference.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2 class="text-center">My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <i class="fas fa-code"></i>
+          <h3>Web Development</h3>
+          <p>HTML, CSS, JavaScript, React, Node.js</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-paint-brush"></i>
+          <h3>UI/UX Design</h3>
+          <p>Figma, Adobe XD, Wireframing, Prototyping</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-database"></i>
+          <h3>Database Management</h3>
+          <p>MySQL, MongoDB, Firebase</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="text-center">My Projects</h2>
+      <div class="projects-grid">
+        <div class="card">
+          <h3>Scholariva</h3>
+          <p>This project is a Tutor-Student Booking Platform that allows tutors to create profiles, list subjects they
+            teach, and manage their availability. Students can search for tutors, book sessions, communicate via a
+            messaging system, and leave reviews. The system includes an admin dashboard to manage users and
+            verify tutor credentials.</p>
+            <p>Technologies used: HTML, CSS, JavaScript.</p>
+        </div>
+        <div class="card">
+          <h3>E-Commerce Store</h3>
+          <p>A web platform for browsing, searching, and purchasing products. Features include user 
+            registration/login, product browsing, shopping cart, order processing, inventory management, and payment.
+             Supports roles like customers, managers, and admins.</p>
+          <p>Technologies used: HTML, CSS, JavaScript, MySQL </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="text-center">Contact Me</h2>
+      <p>Feel free to reach out to me via email or social media:</p>
+      <ul>
+        <li><a href="mailto:ifrahranarauf@gmail.com">Email: ifrahranarauf@gmail.com</a></li>
+        <li><a href="https://github.com/Ifrah-Rauf09">GitHub: Ifrah-Rauf09</a></li>
+        <li><a href="https://www.linkedin.com/in/ifrah-rana-51777134a/">LinkedIn: ifrah-rana</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ifrah Rauf. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
