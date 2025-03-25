@@ -1,0 +1,53 @@
+# Portfolio
+Scholariva
+
+Project
+Title & Description
+The Scholariva is a web-based application that facilitates seamless interaction between students and tutors. Tutors can create profiles, manage availability, and accept bookings, while students can search for tutors, schedule sessions, and provide feedback. The platform includes an admin panel for user verification and dispute resolution.
+
+Features
+Responsive Design – Works on various screen sizes and devices.
+Tutor Profile Creation – Tutors can upload personal information, qualifications, and subjects.
+Search & Filters – Students can filter tutors by subject, location, price, and availability.
+Booking System – Calendar-based scheduling for session booking.
+Real-Time Chat – Integrated messaging using WebSockets.
+Payment Integration – Secure online transactions using Stripe/PayPal.
+Notifications – Email and SMS alerts for important updates.
+Admin Dashboard – User verification, dispute resolution, and platform monitoring.
+
+Tech Stack
+Frontend: HTML, CSS, JavaScript
+Backend: Node.js, Express.js
+Database: MySQL
+Other Libraries & APIs:
+FullCalendar.js for scheduling
+Stripe/PayPal for payment processing
+Socket.io for real-time messaging
+
+Installation & Usage
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+   git clone <repository-url>
+2. Navigate to the project directory:
+   Scholariva
+3. Install dependencies:
+   npm install
+4. Set up the database:
+   Configure MySQL database and update connection details in config.js.
+   Run migration scripts to set up tables.
+5. Start the development server:
+   npm start
+6. Open http://localhost:3000 in your browser.
+
+Live Demo
+Click here to view the live demo 
+https://github.com/Ifrah-Rauf09/Portfolio
+
+Author & Contact
+Author: Ifrah Rauf  
+Email: ifrahranarauf@gmail.com  
+GitHub: https://github.com/Ifrah-Rauf09
+
+License
+This project is licensed under the MIT License.
